@@ -1,0 +1,76 @@
+﻿body {
+    font-family: "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #F7F7F7;
+
+}
+#page-wrapper {
+    padding-left: 0 !important;
+}
+#page-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.page-blank-wrap {
+    overflow: hidden;
+    width: 800px;
+    margin: 25px auto 0;
+    padding: 0 20px;
+}
+.page-blank-wrap .site-error {
+    margin-bottom: 30px;
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+h1, .h1 {
+    font-size: 36px;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+.page-blank-wrap .site-error {
+    margin-bottom: 30px;
+    text-align: center;
+}
+h4, .h4 {
+    font-size: 18px;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+a {
+    color: #4a90e6;
+    text-decoration: none;
+}
