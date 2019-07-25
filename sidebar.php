@@ -21,10 +21,10 @@
         <h3 class="title-sidebar"><i class="layui-icon">&#xe60c;</i>博主动态 ~ </h3>
         <ul>
             <?php
-                $cid = 15;
                 $db = Typecho_Db::get();
+                $cid = $db->fetchRow($db->select('cid')->from('table.contents')->where('template = ? AND status = ?', 'mylife.php', 'publish'))['cid'];
                 $comments = $db->fetchAll($db->select()->from('table.comments')->where('cid = ? AND status = ?', $cid, 'approved')->order('created', Typecho_Db::SORT_DESC));
-
+                
                 foreach($comments as $comment) {
                     echo '<li>';
                     echo '<span class="layui-badge-dot layui-bg-gray"></span>';
