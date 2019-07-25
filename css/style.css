@@ -496,6 +496,29 @@ textarea {
     color: #666
 }
 
+/* 友情链接 */
+.link {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    overflow: hidden
+}
+
+.link div a {
+    width: 45%;
+    margin: 0 6px 5px 0 !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.link i {
+    color: #666
+}
+
 /* 页码 */
 .page-navigator {
     padding: 15px;
@@ -647,6 +670,14 @@ textarea {
 
 .detail>* {
     margin-bottom: 24px;
+}
+
+.detail img {
+    display: block;
+    margin: 0 auto 8px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
 }
 
 /* 动态页 */
