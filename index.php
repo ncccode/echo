@@ -4,7 +4,7 @@
  * 
  * @package Echo
  * @author 宁采陈
- * @version 1.0
+ * @version 1.2
  * @link https://www.echo.so
  */
 
