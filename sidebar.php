@@ -17,6 +17,23 @@
                ->parse('<li class="layui-col-md12 layui-col-xs6"><a href="{permalink}"><i class="layui-icon">&#xe63c;</i> {name}<span class="layui-badge layui-bg-gray">{count}</span></a></li>'); ?>
         </ul>
     </div>
+    <div class="dynamic">
+        <h3 class="title-sidebar"><i class="layui-icon">&#xe60c;</i>博主动态 ~ </h3>
+        <ul>
+            <?php
+                $cid = 15;
+                $db = Typecho_Db::get();
+                $comments = $db->fetchAll($db->select()->from('table.comments')->where('cid = ? AND status = ?', $cid, 'approved')->order('created', Typecho_Db::SORT_DESC));
+
+                foreach($comments as $comment) {
+                    echo '<li>';
+                    echo '<span class="layui-badge-dot layui-bg-gray"></span>';
+                    echo '<p>'.$comment['text'].'<small>'.date("Y年m月d日 H:i:s",$comment['created']).'</small></p>';
+                    echo '</li>';
+                }
+            ?>          
+        </ul>
+    </div>
     <div class="tags">
             <h3 class="title-sidebar"><i class="layui-icon">&#xe66e;</i>标签云</h3>
             <div>
@@ -25,5 +42,11 @@
                     <a class="layui-btn layui-btn-xs layui-btn-primary" style="color: rgb(<?php echo(rand(0, 255)); ?>, <?php echo(rand(0,255)); ?>, <?php echo(rand(0, 255)); ?>)" href="<?php $tags->permalink(); ?>" title='<?php $tags->name(); ?>'><?php $tags->name(); ?></a>
                 <?php endwhile; ?>
             </div>
+    </div>
+    <div class="link">
+        <h3 class="title-sidebar"><i class="layui-icon">&#xe64c;</i>友情链接<a style="float: right;color: #666;" href="#">申请</a></h3>
+        <div>
+            <a class="layui-btn layui-btn-xs layui-btn-primary" href="https://www.echo.so" title='宁采陈个人博客' target="_blank">宁采陈博客</a>
+        </div>
     </div>
 </div>
