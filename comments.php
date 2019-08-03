@@ -1,7 +1,7 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
 
 <?php function threadedComments($comments, $options) {
-    $commentClass = '';
+    $commentClass = '';$group = '';
     if ($comments->authorId) {
         if ($comments->authorId == $comments->ownerId) {
             $group = '博主';
