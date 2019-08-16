@@ -160,7 +160,7 @@ textarea {
     background: none;
 }
 .header .layui-nav .layui-nav-item{
-    margin: 0 20px; 
+    margin: 0 10px; 
 }
 .header .layui-nav .layui-nav-item:after,.header .layui-nav .layui-nav-bar{
     height: 1px;
@@ -168,6 +168,7 @@ textarea {
 }
 .header .layui-nav .layui-nav-item a{
     color: #212220;
+    padding: 0 16px;
 }
 .header .layui-nav .layui-nav-item a:hover{
     color: #6bc30d;
@@ -320,10 +321,11 @@ textarea {
     overflow-y: scroll
 }
 
-.text img {
+.text img:not([class]) {
     max-width: 80% !important;
     height: auto !important;
-    margin: 20px 0
+    margin: 20px auto;
+    display: block;
 }
 
 .copy-text {

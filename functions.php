@@ -47,3 +47,9 @@ function getPermalinkFromCoid($coid) {
 	if (empty($row)) return '';
 	return '<a href="#comment-'.$coid.'">@'.$row['author'].'</a>';
 }
+
+// 主题设置
+function themeConfig($form) {
+    $logoUrl = new Typecho_Widget_Helper_Form_Element_Text('logoUrl', NULL, NULL, _t('站点 LOGO 地址'), _t('在这里填入一个图片 URL 地址, 可以在网站标题前加上一个 LOGO'));
+    $form->addInput($logoUrl);
+}

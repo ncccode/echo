@@ -47,3 +47,5 @@
 
     </div>
 </div>
+
+<?php $this->need('footer.php'); ?>

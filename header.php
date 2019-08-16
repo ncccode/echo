@@ -33,7 +33,7 @@
                 <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
             </a>
         <?php else: ?>
-            <a class="logo" href="<?php $this->options->siteUrl(); ?>">echo '<?php $this->options->title() ?>';</a>
+            <a class="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
         <?php endif; ?>
         
         <ul class="layui-nav">
