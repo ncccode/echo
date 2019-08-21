@@ -309,7 +309,7 @@ textarea {
 .text {
     padding-top: 0;
     padding-bottom: 0;
-    line-height: 3;
+    line-height: 2;
     overflow: hidden
 }
 
@@ -617,6 +617,10 @@ textarea {
     float: left;
     margin-right: 10px;
     color: #888
+}
+
+.pinglun .t-s p {
+    word-break: break-all;
 }
 
 .pinglun .cancel-comment-reply {
@@ -950,4 +954,23 @@ textarea {
     .about-life .t-i {
         margin: 0
     }
+}
+
+
+/* 兼容系统默认markdown排版样式 */
+.text p {
+    margin: 14px 0px;
+}
+
+.text ol, .text ul {
+    margin: 14px 0px;
+    padding-left: 40px;
+}
+
+.text ol li {
+    list-style: decimal;
+}
+
+.text ul li {
+    list-style: disc;
 }
