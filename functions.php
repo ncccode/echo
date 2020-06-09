@@ -110,8 +110,8 @@ function themeConfig($form) {
 	$options = Typecho_Widget::widget('Widget_Options');
 
 	$Html = <<<HTML
-	<link rel="stylesheet" href="http://test.echo.so/usr/themes/echo/layui/css/layui.css">
-	<script src="http://test.echo.so/usr/themes/echo/layui/layui.js"></script>
+	<link rel="stylesheet" href="/usr/themes/echo/layui/css/layui.css?v=2.5.6">
+	<script src="/usr/themes/echo/layui/layui.js?v=2.5.6"></script>
 
 	<fieldset class="layui-elem-field">
 		<legend>个性化配置面板</legend>

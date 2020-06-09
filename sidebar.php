@@ -29,7 +29,7 @@
     $Tag_Cloud = $this->widget('Widget_Metas_Tag_Cloud', 'sort=rand()&ignoreZeroCount=1&limit=30');
     if($Tag_Cloud->have()){
         while($Tag_Cloud->next()){
-            $tags_text .= '<a class="layui-btn layui-btn-xs layui-btn-primary" style="color: rgb('.rand(0, 255).','. rand(0,255).','. rand(0, 255).')" href="'.$tags->permalink().'" title="'.$tags->name().'">'.$tags->name().'</a>';
+            $tags_text .= '<a class="layui-btn layui-btn-xs layui-btn-primary" style="color: rgb('.rand(0, 255).','. rand(0,255).','. rand(0, 255).')" href="'.$Tag_Cloud->permalink.'" title="'.$Tag_Cloud->name.'">'.$Tag_Cloud->name.'</a>';
         }
     }
 ?>
