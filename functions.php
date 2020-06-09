@@ -135,7 +135,7 @@ function themeConfig($form) {
 				<label class="layui-form-label">开启排名</label>
 				<div class="layui-input-inline">
 					<input type="checkbox" name="echo_isShow" value="checked" lay-skin="switch" lay-text="开启|关闭" {$options->isShow} >
-					<div class="layui-word-aux">开启后，将在<a href="http://user.echo.so/" target="_blank">http://user.echo.so/</a>显示</div>
+					<div class="layui-word-aux">开启后，将在<a href="https://user.echo.so/" target="_blank">https://user.echo.so/</a>显示</div>
 				</div>
 			</div>
 			<hr>

