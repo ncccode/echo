@@ -53,15 +53,14 @@ echo $commentClass;
         <div class="layui-col-md9 layui-col-lg9">
             <div class="about-life">
                 <div class="t-w">
-                <div class="t-u"><img height="120" src="<?php $this->options->themeUrl('img/blog.jpg'); ?>"></div>
+                <div class="t-u"><img width="120" height="120" src="<?php $this->options->mylifeAvatar(); ?>"></div>
                 <div class="t-t">
-                    <h1>宁采陈<span><i class="layui-icon">&#xe635;</i>全栈工程师</span></h1>
+                    <h1><?php $this->options->mylifeName(); ?><span><i class="layui-icon">&#xe635;</i><?php $this->options->mylifeJob(); ?></span></h1>
                     <div class="t-d layui-hide-xs">
                         <span class="typed"></span>
                     </div>
                     <div class="t-i">
-                        <a class="layui-btn layui-btn-radius layui-btn-sm" href="/about.html"> 关于我</a>
-                        <a class="layui-btn layui-btn-radius layui-btn-sm" href="/guestbook.html"> 留言</a>
+                        <?php $this->options->mylifeBtn(); ?>
                     </div>
                 </div>
                 </div>
@@ -98,7 +97,7 @@ echo $commentClass;
 <script type="text/javascript" src="https://cdn.bootcss.com/typed.js/2.0.5/typed.js"></script>
 <script>
     var typed = new Typed(".t-d .typed", {
-        strings: ["请在mylife.php文件里修改此页信息"],
+        strings: ["<?php $this->options->mylifeDesc(); ?>"],
         typeSpeed:30 // 速度
     });
 </script>

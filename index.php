@@ -1,6 +1,6 @@
 <?php
 /**
- * 这是宁采陈编写的一套极简美观的Typecho模板主题。你可以在<a href="https://echo.so">宁采陈个人博客</a>获得更多关于此皮肤的信息
+ * 这是宁采陈编写的一套极简美观的Typecho模板主题。你可以在<a href="https://www.echo.so">宁采陈个人博客</a>获得更多关于此皮肤的信息
  * 
  * @package Echo
  * @author 宁采陈
@@ -13,11 +13,61 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 
 <div class="layui-container">
+    <?php $this->need('search.php'); ?>
+
+    <?php if (!empty($this->options->bigCarouselSwitch) && $this->options->bigCarouselSwitch == 'checked'): ?>
+        <div class="layui-carousel main" id="bigCarousel" style="padding: 0 7.5px;">
+            <div carousel-item="">
+                <?php $this->options->bigCarouselText() ?>
+            </div>
+        </div>
+        <script>
+            layui.use('carousel', function(){
+                var carousel = layui.carousel;
+                //建造实例
+                carousel.render({
+                    elem: '#bigCarousel'
+                    ,width: '100%'
+                    ,height: '<?php echo $this->options->bigCarouselHeight?$this->options->bigCarouselHeight:'180px'; ?>'
+                    ,arrow: 'always'
+                });
+            });
+        </script>
+    <?php endif; ?>
+
     <div class="layui-row layui-col-space15 main">
+    
         <div class="layui-col-md9 layui-col-lg9">
+
+            <?php if (!empty($this->options->smallCarouselSwitch) && $this->options->smallCarouselSwitch == 'checked'): ?>
+                <div class="layui-carousel list-card" id="smallCarousel">
+                    <div carousel-item="">
+                        <?php $this->options->smallCarouselText() ?>
+                    </div>
+                </div>
+                <script>
+                    layui.use('carousel', function(){
+                        var carousel = layui.carousel;
+                        //建造实例
+                        carousel.render({
+                            elem: '#smallCarousel'
+                            ,width: '100%'
+                            ,height: '<?php echo $this->options->smallCarouselHeight?$this->options->smallCarouselHeight:'180px'; ?>'
+                            ,arrow: 'always'
+                        });
+                    });
+                </script>
+            <?php endif; ?>
+
             <?php while($this->next()): ?>
                 <div class="title-article list-card">
-                    <div class="list-pic"><a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>"><img src="<?php echo thumb($this); ?>" alt="<?php $this->title() ?>" class="img-full"></a></div>
+                    <?php if (!empty($this->options->thumbType)): ?>
+                        <div class="list-pic">
+                            <a href="<?php $this->permalink() ?>" title="<?php $this->title() ?>">
+                                <img src="<?php $thumb = 'thumb'.$this->options->thumbType; echo $thumb($this); ?>" alt="<?php $this->title() ?>" class="img-full">
+                            </a>
+                        </div>
+                    <?php endif; ?>
                     <a href="<?php $this->permalink() ?>">
                         <h1><?php $this->title() ?></h1>
                         <p>

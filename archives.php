@@ -11,6 +11,8 @@
 
 
 <div class="layui-container">
+    <?php $this->need('search.php'); ?>
+    
     <div class="layui-row layui-col-space15 main">
         <div class="map">
             <span class="layui-breadcrumb">
@@ -35,11 +37,12 @@
                             <?php 
                                 $year = $archives->year;
                                 $month = $archives->month;
-                                $nextMonth = $archives->month+1;
+                                $nextYear = $month == 12 ? $year+ 1 : $year;
+                                $nextMonth = $month == 12 ? 1 : $month+1;
                                 $contents = $this->db->fetchAll($this->select()
                                 ->where('table.contents.status = ?', 'publish')
                                 ->where('table.contents.created >= ?', strtotime("$year-$month"))
-                                ->where('table.contents.created < ?', strtotime("$year-$nextMonth"))
+                                ->where('table.contents.created < ?', strtotime("$nextYear-$nextMonth"))
                                 ->where('table.contents.type = ?', 'post')
                                 ->order('table.contents.created', Typecho_Db::SORT_DESC), array($this, 'push'));
                                 //var_dump($contents);

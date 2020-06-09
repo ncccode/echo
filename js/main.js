@@ -36,7 +36,7 @@ layui.use(['layer', 'element', 'util'], function(){
             }, img.onload = function () {
                 layer.open({
                     type: 1, shadeClose: true, success: img.onerror, content: $(img), title: false,
-                    area: img.width > 1140 ? '1140px' : img.width, closeBtn: 1, skin: 'layui-layer-nobg', end: function () {
+                    area: [img.width > 1140 ? '1140px' : img.width, img.height > 800 ? '800px' : img.height], closeBtn: 1, skin: 'layui-layer-nobg', end: function () {
                         document.body.removeChild(img);
                     }
                 });
