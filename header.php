@@ -16,10 +16,10 @@
     <!-- 通过自有函数输出HTML头部信息 -->
     <?php $this->header(); ?>
     <link rel="shortcut icon" href="<?php $this->options->themeUrl('img/favicon.png'); ?>">
-    <link rel="stylesheet" href="<?php $this->options->themeUrl('layui/css/layui.css'); ?>">
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('layui/css/layui.css'); ?>?v=2.5.6">
     <link rel="stylesheet" href="<?php $this->options->themeUrl('css/style.css'); ?>?t=<?php echo time(); ?>">
-    <script src="<?php $this->options->themeUrl('layui/layui.js'); ?>"></script>
-    <script src="<?php $this->options->themeUrl('js/main.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('layui/layui.js'); ?>?v=2.5.6"></script>
+    <script src="<?php $this->options->themeUrl('js/main.js'); ?>?v=2.0"></script>
 
     <style>
         <?php if (!empty($this->options->navFixed) && $this->options->navFixed == 'checked'): ?>
