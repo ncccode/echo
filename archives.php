@@ -11,7 +11,7 @@
 
 
 <div class="layui-container">
-    <?php $this->need('search.php'); ?>
+    <?php $this->need('searchs.php'); ?>
     
     <div class="layui-row layui-col-space15 main">
         <div class="map">

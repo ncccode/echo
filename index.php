@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 
 <div class="layui-container">
-    <?php $this->need('search.php'); ?>
+    <?php $this->need('searchs.php'); ?>
 
     <?php if (!empty($this->options->bigCarouselSwitch) && $this->options->bigCarouselSwitch == 'checked'): ?>
         <div class="layui-carousel main" id="bigCarousel" style="padding: 0 7.5px;">
