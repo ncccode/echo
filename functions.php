@@ -56,8 +56,10 @@ function thumb2($obj) {
 function thumb3($obj) {
 	$options = Typecho_Widget::widget('Widget_Options');
 	$thumbs = explode("|",$options->thumbs);
-	if($options->thumbs && count($thumbs)>0){
-		$thumb = $thumbs[rand(0,count($thumbs)-1)];
+	$cid = intval($obj->cid);
+	$thumbsLength = count($thumbs);
+	if($options->thumbs && $thumbsLength>0){
+		$thumb = $thumbs[$cid%$thumbsLength];
 	}else{
 		$thumb = '/usr/themes/echo/img/00.png';
 	}
