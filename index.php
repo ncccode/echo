@@ -1,21 +1,34 @@
 <?php
 /**
- * 这是宁采陈编写的一套极简美观的Typecho模板主题。你可以在<a href="https://www.echo.so">宁采陈个人博客</a>获得更多关于此皮肤的信息
- * 
- * @package Echo
+ * 念念不忘　　必有回响
+ * 每一处地方的精心打磨
+ * 都只为离完美更进一步
+ *
+ * @package Echo Theme
  * @author 宁采陈
- * @version 2.0
- * @link https://www.echo.so
+ * @version 3.0
+ * @link https://www.ncc.wang
+ *
+ * ｅｅｅｅｅｅｅ　　　　　　　　　　　ｅｅｅ　　　　　　　　　　　　　　　　　　　　
+ * ｅｅｅｅｅｅｅ　　　　　　　　　　　ｅｅｅ　　　　　　　　　　　　　　　　　　　　
+ * ｅｅｅｅ　　　　　　　ｅｅｅｅｅｅ　ｅｅｅｅｅｅｅ　　　　ｅｅｅｅｅｅ　
+ * ｅｅｅｅ　　　　　　ｅｅｅｅｅｅｅ　ｅｅｅｅｅｅｅ　　　ｅｅｅｅｅｅｅｅ
+ * ｅｅｅｅｅｅｅ　　　ｅｅｅｅｅｅｅ　ｅｅｅｅｅｅｅｅ　 ｅｅｅｅｅｅｅｅｅ
+ * ｅｅｅｅｅｅｅ　　ｅｅｅｅ　　　　　ｅｅｅ　ｅｅｅｅ　 ｅｅｅ　　　ｅｅｅ　　　
+ * ｅｅｅｅ　　　　　ｅｅｅｅ　　　　　ｅｅｅ　　ｅｅｅ　 ｅｅｅ　　　ｅｅｅ　　　
+ * ｅｅｅｅ　　　　　　ｅｅｅｅ　　ｅ　ｅｅｅ　　ｅｅｅ　 ｅｅｅ　　　ｅｅｅ　　　
+ * ｅｅｅｅｅｅｅｅ　　ｅｅｅｅｅｅｅ　ｅｅｅ　　ｅｅｅ　　ｅｅｅｅｅｅｅｅ　　　
+ * ｅｅｅｅｅｅｅｅ　　　ｅｅｅｅｅｅ　ｅｅｅ　　ｅｅｅ　　　ｅｅｅｅｅｅ　　　
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
- $this->need('header.php');
+$this->need('Common/header.php');
 ?>
 
 <div class="layui-container">
-    <?php $this->need('searchs.php'); ?>
+    <?php $this->need('Common/searchs.php'); ?>
 
-    <?php if (!empty($this->options->bigCarouselSwitch) && $this->options->bigCarouselSwitch == 'checked'): ?>
+    <?php if (!empty($this->options->bigCarouselSwitch) && $this->options->bigCarouselSwitch == 'true'): ?>
         <div class="layui-carousel main" id="bigCarousel" style="padding: 0 7.5px;">
             <div carousel-item="">
                 <?php $this->options->bigCarouselText() ?>
@@ -36,10 +49,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <?php endif; ?>
 
     <div class="layui-row layui-col-space15 main">
-    
+
         <div class="layui-col-md9 layui-col-lg9">
 
-            <?php if (!empty($this->options->smallCarouselSwitch) && $this->options->smallCarouselSwitch == 'checked'): ?>
+            <?php if (!empty($this->options->smallCarouselSwitch) && $this->options->smallCarouselSwitch == 'true'): ?>
                 <div class="layui-carousel list-card" id="smallCarousel">
                     <div carousel-item="">
                         <?php $this->options->smallCarouselText() ?>
@@ -86,10 +99,10 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 <?php $this->pageNav('«', '»', 1, '...', array('wrapTag' => 'div', 'wrapClass' => 'layui-laypage layui-laypage-molv', 'itemTag' => '', 'currentClass' => 'current', )); ?>
             </div>
         </div>
-        
-        <?php $this->need('sidebar.php'); ?>
+
+        <?php $this->need('Common/sidebar.php'); ?>
 
     </div>
 </div>
 
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Common/footer.php'); ?>

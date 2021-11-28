@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('Common/header.php'); ?>
 
 <div class="layui-container">
     <div class="layui-row layui-col-space15 main">
@@ -18,13 +18,13 @@
                 <?php $this->content(); ?>
             </div>
             <div class="comment-text layui-form">
-                <?php $this->need('comments.php'); ?>
+                <?php $this->need('Common/comments.php'); ?>
             </div>
         </div>
-        
-        <?php $this->need('sidebar.php'); ?>
+
+        <?php $this->need('Common/sidebar.php'); ?>
 
     </div>
 </div>
 
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Common/footer.php'); ?>

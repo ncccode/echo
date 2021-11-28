@@ -7,12 +7,12 @@
 ?>
 
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('Common/header.php'); ?>
 
 
 <div class="layui-container">
-    <?php $this->need('searchs.php'); ?>
-    
+    <?php $this->need('Common/searchs.php'); ?>
+
     <div class="layui-row layui-col-space15 main">
         <div class="map">
             <span class="layui-breadcrumb">
@@ -34,7 +34,7 @@
                         <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
                         <div class="layui-timeline-content">
                             <h3 class="layui-timeline-title"><a href="<?php $archives->permalink(); ?>"><?php $archives->date(); ?></a></h3>
-                            <?php 
+                            <?php
                                 $year = $archives->year;
                                 $month = $archives->month;
                                 $nextYear = $month == 12 ? $year+ 1 : $year;
@@ -50,7 +50,7 @@
                                     echo "<p><a href='$content[permalink]' title='$content[title]'>$content[title] <small><i class='layui-icon'>&#xe637;</i> $content[day]日发布，共$content[commentsNum]条评论</small></a></p>";
                                 }
                             ?>
-                            
+
                         </div>
                     </li>
                     <?php endwhile; ?>
@@ -63,10 +63,10 @@
                 </ul>
             </div>
         </div>
-        
-        <?php $this->need('sidebar.php'); ?>
+
+        <?php $this->need('Common/sidebar.php'); ?>
 
     </div>
 </div>
 
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Common/footer.php'); ?>

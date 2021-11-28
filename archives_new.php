@@ -7,7 +7,7 @@
 ?>
 
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('Common/header.php'); ?>
 
 
 <div class="layui-container">
@@ -33,8 +33,8 @@
                                 <a href="<?php $archives->permalink(); ?>"><h2 id="timeline-header-<?php $archives->sequence(); ?>"><?php $archives->date(); ?></h2></a>
                             </span>
                         </li>
-                        
-                        <?php 
+
+                        <?php
                             $year = $archives->year;
                             $month = $archives->month;
                             $nextYear = $month == 12 ? $year+ 1 : $year;
@@ -68,7 +68,7 @@ HTML;
                 </ul>
             </div>
         </div>
-        
+
         <div class="sidebar layui-col-md3 layui-col-lg3">
             <div class="timeline-menu">
                 <h3 class="title-sidebar"><i class="layui-icon">&#xe60c;</i>目录</h3>
@@ -114,4 +114,4 @@ layui.use('jquery', function(){
 });
 </script>
 
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Common/footer.php'); ?>

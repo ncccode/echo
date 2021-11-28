@@ -14,11 +14,11 @@
         } else {
             $commentClass .= ' comment-by-user';  //如果是评论作者的添加 .comment-by-user 样式
         }
-    } 
+    }
     $commentLevelClass = $comments->_levels > 0 ? ' comment-child' : ' comment-parent';  //评论层数大于0为子级，否则是父级
 ?>
 
-<div id="comment-<?php $comments->theId(); ?>" class="t-list<?php 
+<div id="comment-<?php $comments->theId(); ?>" class="t-list<?php
 if ($comments->levels > 0) {
     echo ' comment-child';
     $comments->levelsAlt(' comment-level-odd', ' comment-level-even');
@@ -28,7 +28,10 @@ if ($comments->levels > 0) {
 $comments->alt(' comment-odd', ' comment-by-author');
 echo $commentClass;
 ?>">
-    <div class="t-p"><?php $comments->gravatar('40', ''); ?></div>
+    <div class="t-p">
+		<?php echo '<img class="avatar" src="' . getAvatar($comments->mail) . '" alt="' .
+			$comments->author . '" width="40" height="40" />'; ?>
+    </div>
     <div class="t-r">
     <strong><?php $comments->author(); ?></strong>
     <p><?php $comments->content(); ?></p>
@@ -39,7 +42,8 @@ echo $commentClass;
 <?php } ?>
 
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<?php $this->need('header.php'); ?>
+<?php $this->need('Common/header.php'); ?>
+
 
 <div class="layui-container">
     <div class="layui-row layui-col-space15 main">
@@ -87,10 +91,10 @@ echo $commentClass;
                 <ol class="comment-list">
                     <?php $comments->listComments(); ?>
                 </ol>
-            </div> 
+            </div>
         </div>
-        
-        <?php $this->need('sidebar.php'); ?>
+
+        <?php $this->need('Common/sidebar.php'); ?>
 
     </div>
 </div>
@@ -128,4 +132,4 @@ echo $commentClass;
         animation: 0;
     }
 </style>
-<?php $this->need('footer.php'); ?>
+<?php $this->need('Common/footer.php'); ?>
