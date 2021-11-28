@@ -1,5 +1,9 @@
 # Typecho 主题 Echo
 
+```
+「安装主题时，文件目录名必须为：Echo，首字母大写」
+```
+
 ![](https://www.ncc.wang/typecho-echo.png)
 
 一套基于layui框架的Typecho主题Echo,主题名取自博客域名（www.echo.so）[注：目前已更换为 www.ncc.wang]
