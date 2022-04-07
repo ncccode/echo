@@ -1,0 +1,183 @@
+.dark {
+    background: #121212;
+    color: #999;
+}
+.dark a {
+    color: #999;
+}
+.dark .header{
+    background: #232323;
+    border-bottom: 1px solid #414243;
+}
+.dark .header .layui-nav .layui-nav-item a {
+    color: #999;
+}
+.dark .header .layui-nav .layui-nav-item .layui-nav-child {
+    border: 1px solid #414243;
+    background-color: #232323;
+}
+.dark .header .layui-nav .layui-nav-item .layui-nav-child a:hover {
+    background-color: #303030;
+}
+.dark .title-article,.dark .text,.dark .tags-text,.dark .copy-text,.dark .page-text,.dark .comment-text,.dark .post,.dark .archives {
+    background: #232323;
+}
+.dark .copy-text div {
+    background: #303030;
+}
+.dark .copy-text div p {
+    color: #777;
+}
+.dark .component,.dark .column,.dark .ads,.dark .dynamic,.dark .tags,.dark .link,.dark .timeline-menu {
+    background: #232323;
+}
+.dark .title-sidebar {
+    border-bottom: 1px solid #414243;
+    color: #999;
+}
+.dark input, .dark textarea {
+    border: 1px solid #414243;
+    background: #414243;
+}
+.dark .layui-btn-primary, .dark .layui-btn-primary:hover {
+    border-color: #515253;
+    color: #999;
+}
+.dark .layui-bg-gray {
+    background-color: #515253!important;
+    color: #999!important;
+}
+.dark .layui-timeline-axis {
+    background-color: #232323;
+}
+.dark .layui-timeline-item:before {
+    background-color: #414243;
+}
+.dark .timeline-wrap {
+    border-color: #414243;
+}
+.dark .timeline-wrap:before {
+    box-shadow: 0 0 0 4px #414243;
+}
+.dark .dynamic ul li {
+    border-left: 2px solid #414243;
+}
+.dark .dynamic ul li span {
+    border: 5px solid #232323;
+}
+.dark .dynamic ul li p {
+    color: #999;
+    border-bottom: 1px solid #414243;
+}
+.dark .link div a {
+    border-bottom: 1px solid #414243;
+    background-color: #232323;
+    color: #999;
+}
+.dark .title-life {
+    background: #232323;
+    border-bottom: 1px #414243 solid;
+}
+.dark .about-life,.dark .mylife {
+    background: #232323;
+}
+.dark .about-life .t-w {
+    background: #303030;
+}
+.dark .mylife .t-r {
+    border-bottom: 1px #414243 solid;
+    color: #999;
+}
+.dark .page-navigator a {
+    background-color: #303030;
+    color: #aaa;
+}
+.dark .page-navigator .current {
+    background: #232323;
+    color: #fff;
+}
+.dark .layui-laypage a,.dark  .layui-laypage button,.dark  .layui-laypage input,.dark  .layui-laypage select,.dark  .layui-laypage span {
+    border: 1px solid #414243;
+}
+
+.dark pre {
+    background: #000;
+}
+
+.dark pre code[class*='language-'] {
+    background: #121212;
+}
+.dark .hljs {
+    color: #c9d1d9;
+    background: #0d1117;
+}
+
+.dark .hljs-doctag,.dark .hljs-keyword,.dark .hljs-meta .hljs-keyword,.dark .hljs-template-tag,.dark .hljs-template-variable,.dark .hljs-type,.dark .hljs-variable.language_ {
+    color: #ff7b72
+}
+
+.dark .hljs-title,.dark .hljs-title.class_,.dark .hljs-title.class_.inherited__,.dark .hljs-title.function_ {
+    color: #d2a8ff
+}
+
+.dark .hljs-attr,.dark .hljs-attribute,.dark .hljs-literal,.dark .hljs-meta,.dark .hljs-number,.dark .hljs-operator,.dark .hljs-selector-attr,.dark .hljs-selector-class,.dark .hljs-selector-id,.dark .hljs-variable {
+    color: #79c0ff
+}
+
+.dark .hljs-meta .hljs-string,.dark .hljs-regexp,.dark .hljs-string {
+    color: #a5d6ff
+}
+
+.dark .hljs-built_in,.dark .hljs-symbol {
+    color: #ffa657
+}
+
+.dark .hljs-code,.dark .hljs-comment,.dark .hljs-formula {
+    color: #8b949e
+}
+
+.dark .hljs-name,.dark .hljs-quote,.dark .hljs-selector-pseudo,.dark .hljs-selector-tag {
+    color: #7ee787
+}
+
+.dark .hljs-subst {
+    color: #c9d1d9
+}
+
+.dark .hljs-section {
+    color: #1f6feb;
+    font-weight: 700
+}
+
+.dark .hljs-bullet {
+    color: #f2cc60
+}
+
+.dark .hljs-emphasis {
+    color: #c9d1d9;
+    font-style: italic
+}
+
+.dark .hljs-strong {
+    color: #c9d1d9;
+    font-weight: 700
+}
+
+.dark .hljs-addition {
+    color: #aff5b4;
+    background-color: #033a16
+}
+
+.dark .hljs-deletion {
+    color: #ffdcd7;
+    background-color: #67060c
+}
+
+.dark .footer {
+    background: #121212;
+    border-top: 1px solid #454545;
+    color: #999;
+}
+.dark .layui-fixbar li {
+    background: #303030;
+}

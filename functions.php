@@ -1,15 +1,59 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-require_once 'Library/Init.php';
+define('__RUN_FUNCTIONS__', true);
+
+require_once dirname(__FILE__) . '/var/init.php';
 
 // 主题设置
 function themeConfig($form) {
-	Echo_Init::init($form);
+	if($form->action==NULL){
+		//配置处理
+		$db = Typecho_Db::get();
+		$options = Typecho_Widget::widget('Widget_Options');
+		$echo = $options->__get('theme:echo');
+		if (!$echo) {
+			$data = array(
+				'nav'=>0,
+				'navFixed'=>'true',
+				'sidebar'=>'1,2,5',
+				'gravatar'=>'https://gravatar.echo.so/avatar/'
+			);
+			$db->query($db->insert('table.options')->rows(array(
+				'name'  =>  'theme:echo',
+				'value' =>  serialize($data),
+				'user'  =>  0
+			)));
+
+		}
+		require_once 'var/Echo/Themes.php';
+		Echo_Themes::start();
+	}else{
+		$Html = <<<HTML
+                <style>
+                    button.btn.primary {
+                        display: none
+                    }
+                </style>
+                <div class="layui-card">
+                    <div class="layui-card-header">Echo 3.1.0</div>
+                    <div class="layui-card-body">
+                        宁采陈<br>
+                        Typecho全新主题3.1
+                    </div>
+                </div>
+                <script>
+                layui.use(['jquery'], function(){
+                    var $ = layui.jquery;
+                    $("div[role='form']").removeClass("col-tb-8").removeClass("col-tb-offset-2");
+                });
+                </script>
+HTML;
+		$layout = new Typecho_Widget_Helper_Layout();
+		$layout->html(_t($Html));
+		$form->addItem($layout);
+	}
 }
-
-function themeInit($that){}
-
 
 // 统计阅读数
 function get_post_view($archive){
@@ -23,15 +67,15 @@ function get_post_view($archive){
 	}
 	$row = $db->fetchRow($db->select('views')->from('table.contents')->where('cid = ?', $cid));
 	if ($archive->is('single')) {
-        $views = Typecho_Cookie::get('extend_contents_views');
+		$views = Typecho_Cookie::get('extend_contents_views');
 		if(empty($views)){
 			$views = array();
 		}else{
 			$views = explode(',', $views);
 		}
-        if(!in_array($cid,$views)){
-	        $db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
-            array_push($views, $cid);
+		if(!in_array($cid,$views)){
+			$db->query($db->update('table.contents')->rows(array('views' => (int) $row['views'] + 1))->where('cid = ?', $cid));
+			array_push($views, $cid);
 			$views = implode(',', $views);
 			Typecho_Cookie::set('extend_contents_views', $views); //记录查看cookie
 		}
@@ -45,7 +89,7 @@ function thumb1($obj) {
 	if(isset($attach->isImage) && $attach->isImage == 1){
 		$thumb = $attach->url;
 	}else{
-		$thumb = '/usr/themes/Echo/Public/home/img/00.png';
+		$thumb = '/usr/themes/echo/public/home/img/00.png';
 	}
 	return $thumb;
 }
@@ -57,7 +101,7 @@ function thumb2($obj) {
 	if($img_src){
 		$thumb = $img_src;
 	}else{
-		$thumb = '/usr/themes/Echo/Public/home/img/00.png';
+		$thumb = '/usr/themes/echo/public/home/img/00.png';
 	}
 	return $thumb;
 }
@@ -69,7 +113,7 @@ function thumb3($obj) {
 	if($options->thumbs && count($thumbs)>0){
 		$thumb = $thumbs[rand(0,count($thumbs)-1)];
 	}else{
-		$thumb = '/usr/themes/Echo/Public/home/img/00.png';
+		$thumb = '/usr/themes/echo/public/home/img/00.png';
 	}
 	return $thumb;
 }

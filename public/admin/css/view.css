@@ -1,0 +1,112 @@
+.set{
+  height: 700px;
+  overflow-y: auto;
+}
+.set .layui-form-label {
+  width: 70px;
+}
+.layui-btn-save{
+  float: right;
+  margin: 5px auto;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  background-color: #36b368;
+}
+
+.pc{
+  height: 700px;
+  margin: 5px;
+  background: url(/usr/themes/echo/public/admin/img/pc.jpg) no-repeat center top;
+  background-size: 100% 100%;
+  padding: 19px 15px 0 13px;
+}
+
+.body{
+  height: 585px;
+  background-color: whitesmoke;
+  font-family: "Consolas","Microsoft JhengHei","Apple LiGothic Medium,Microsoft YaHei","微软雅黑","Arial",sans-serif;
+  overflow-y: auto;
+}
+.body a {
+  color: #333;
+}
+.view{
+  width: 80%;
+  margin: 10px auto;
+}
+
+.view .left{
+  width: 75%;
+  float: left;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+.view .right{
+  width: 25%;
+  float: left;
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* 头部 */
+.header{
+  border-bottom: 1px solid #e8e9e7;
+  background-color: rgba(255,255,255,1);
+}
+.header_fixed {
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+.logo{
+  position: absolute;
+  left: 10px;
+  top: 16px;
+  font-size: 1.4em;
+}
+.logo img{
+  width: 82px;
+  height: 31px;
+}
+
+.header .layui-nav{
+  position: absolute;
+  right: 0;top: 0;
+  padding: 0;
+  background: none;
+}
+.header .layui-nav .layui-nav-item:after,.header .layui-nav .layui-nav-bar{
+  height: 1px;
+  background-color: #6bc30d;
+}
+.header .layui-nav .layui-nav-item a{
+  color: #212220;
+  padding: 0 16px;
+}
+.header .layui-nav .layui-nav-item a:hover{
+  color: #6bc30d;
+}
+.header .layui-nav .layui-nav-item[mobile]{
+  display: none;
+}
+
+/* 底部 */
+.footer {
+  background: #fff;
+  margin-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 30px
+}
+
+.footer span {
+  color: #999
+}
+
+.footer .t-copy {
+  text-align: center;
+}
