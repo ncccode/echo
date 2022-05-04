@@ -222,7 +222,7 @@ include $dir.'common-js.php';
         el: '#app',
         data: {
             logoUrl: '<?php $options->logoUrl(); ?>',
-            title: '<?php $options->title(); ?>',
+            title: `<?php $options->title(); ?>`,
             nav: '<?php $options->nav(); ?>',
             navFixed: '<?php $options->navFixed(); ?>',
             headerColor: '<?php $options->headerColor(); ?>',
