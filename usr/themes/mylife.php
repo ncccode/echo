@@ -91,6 +91,9 @@ echo $commentClass;
                 <ol class="comment-list">
                     <?php $comments->listComments(); ?>
                 </ol>
+                <div class="page-navigator">
+					<?php $comments->pageNav('«', '»', 1, '...', array('wrapTag' => 'div', 'wrapClass' => 'layui-laypage layui-laypage-molv', 'itemTag' => '', 'currentClass' => 'current', )); ?>
+                </div>
             </div>
         </div>
 
