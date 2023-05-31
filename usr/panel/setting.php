@@ -10,7 +10,7 @@ Typecho_Widget::widget('Widget_Metas_Category_Admin')->to($categories);
 ?>
 
 <?php echo '<link rel="stylesheet" href="'.$options->themeUrl('public/admin/css/view.css','echo').'">'; ?>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<?php echo '<script src="'.$options->themeUrl('public/admin/js/vue.js','echo').'"></script>'; ?>
 <div class="main">
     <div class="container">
         <div class="layui-card">

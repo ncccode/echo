@@ -20,11 +20,18 @@
     <link rel="stylesheet" href="<?php $this->options->themeUrl('public/home/css/style.css'); ?>?t=<?php echo time(); ?>">
     <script src="<?php $this->options->themeUrl('public/lib/layui/layui.js'); ?>?v=2.6.8"></script>
     <script src="<?php $this->options->themeUrl('public/home/js/main.js'); ?>?v=3.0"></script>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/github<?php if ($this->options->codeStyle == '1'){echo '-dark';} ?>.min.css">
-    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	<?php if($this->options->codeStyle == '1'): ?>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('public/home/css/github.min.css'); ?>">
+	<?php else: ?>
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('public/home/css/github-dark.min.css'); ?>">
+	<?php endif; ?>
+
+    <script src="<?php $this->options->themeUrl('public/home/js/jquery.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('public/home/js/highlight.min.js'); ?>"></script>
+
+    <link rel="stylesheet" href="<?php $this->options->themeUrl('public/home/css/jquery.fancybox.min.css'); ?>">
+    <script src="<?php $this->options->themeUrl('public/home/js/jquery.fancybox.min.js'); ?>"></script>
 
     <style>
         <?php if (!empty($this->options->navFixed) && $this->options->navFixed == 'true'): ?>

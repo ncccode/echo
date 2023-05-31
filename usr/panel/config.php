@@ -29,7 +29,7 @@ include $dir.'menu.php';
                             <div class="layui-input-inline" style="width: 250px;">
                                 <input type="text" name="gravatar" value="<?php $options->gravatar(); ?>" placeholder="gravatar头像地址" autocomplete="off" class="layui-input">
                             </div>
-                            <div class="layui-form-mid layui-word-aux">例如：http://gravatar.echo.so/avatar/</div>
+                            <div class="layui-form-mid layui-word-aux">例如：https://dn-qiniu-avatar.qbox.me/avatar/</div>
                         </div>
                         <hr>
 
